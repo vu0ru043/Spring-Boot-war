@@ -23,11 +23,9 @@ pipeline {
 
 pipeline {
     agent any
-    /*
     tools{
-        maven 'local maven'
+        jdk 'LOCAL_JDK'
     }
-    */
     stages{
         stage('Build'){
             steps {
