@@ -30,7 +30,7 @@ pipeline {
             }
             post {
                 success {
-                    echo '存檔'
+                    echo '封存'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
