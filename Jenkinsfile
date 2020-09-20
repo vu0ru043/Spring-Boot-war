@@ -33,10 +33,14 @@ pipeline {
             }
             post {
                 success {
-                    echo '封存'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
         }
     }
+    stage('Deploy-To-Staging'){
+            steps {
+                build job: 'Deploy-To-Staging'
+            }
+        }
 }
